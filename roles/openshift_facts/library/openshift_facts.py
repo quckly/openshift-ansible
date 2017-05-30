@@ -1762,9 +1762,9 @@ def set_container_facts_if_unset(facts):
         registry_image = 'aep3_beta/aep-docker-registry'
         deployer_image = 'aep3_beta/aep-deployer'
     else:
-        master_image = 'openshift/origin'
+        master_image = 'leadex/origin'
         cli_image = master_image
-        node_image = 'openshift/node'
+        node_image = 'leadex/node'
         ovs_image = 'openshift/openvswitch'
         etcd_image = 'registry.access.redhat.com/rhel7/etcd'
         pod_image = 'openshift/origin-pod'
