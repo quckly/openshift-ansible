@@ -9,7 +9,7 @@
 %global __requires_exclude ^/usr/bin/ansible-playbook$
 
 Name:           openshift-ansible
-Version:        3.5.5.20
+Version:        3.5.79
 Release:        1%{?dist}
 Summary:        Openshift and Atomic Enterprise Ansible
 License:        ASL 2.0
@@ -271,6 +271,47 @@ Atomic OpenShift Utilities includes
 
 
 %changelog
+* Tue Jun 06 2017 Jenkins CD Merge Bot <tdawson@redhat.com> 3.5.79-1
+- 
+
+* Mon Jun 05 2017 Scott Dodson <sdodson@redhat.com> 3.5.78-1
+- inventory: rename certificates->certificate in router example
+  (smilner@redhat.com)
+- Updating image for registry_console (ewolinet@redhat.com)
+- backport #4321 verify upgrade targets separately for each group
+  (jchaloup@redhat.com)
+- disable docker-excluder during its upgrade (jchaloup@redhat.com)
+- replace repoquery command with module (jchaloup@redhat.com)
+- backport #4176 'Rework openshift_excluders role' to 1.5 (rteague@redhat.com)
+- backport #4065 'Extend repoquery command (of lib_utils role) to ignore
+  excluders' to 1.5 (jchaloup@redhat.com)
+- backport #3879 'run excluders over selected set of hosts during
+  control_plane/node upgrade' to 1.5 (jchaloup@redhat.com)
+- backport #4038 'Upgrade Refactor' to 1.5 (jchaloup@redhat.com)
+- Refactor initialize groups tasks (backport for 1.5) (rteague@redhat.com)
+
+* Fri Jun 02 2017 Jenkins CD Merge Bot <tdawson@redhat.com> 3.5.77-1
+- 
+
+* Fri Jun 02 2017 Scott Dodson <sdodson@redhat.com> 3.5.76-1
+- 
+
+* Thu Jun 01 2017 Jenkins CD Merge Bot <tdawson@redhat.com> 3.5.5.22-1
+- 
+
+* Thu Jun 01 2017 Scott Dodson <sdodson@redhat.com> 3.5.75-1
+- Skip router/registry cert redeploy when
+  openshift_hosted_manage_{router,registry}=false (abutcher@redhat.com)
+- AMP 2.0 (sdodson@redhat.com)
+- Removing logging and metrics hosted templates (ewolinet@redhat.com)
+
+* Wed May 31 2017 Scott Dodson <sdodson@redhat.com> 3.5.74-1
+- [JMAN4-161] Add templates and pv example for cloudforms jboss middleware
+  manager (pgier@redhat.com)
+
+* Tue May 30 2017 Jenkins CD Merge Bot <tdawson@redhat.com> 3.5.5.21-1
+- 
+
 * Thu May 25 2017 Jenkins CD Merge Bot <tdawson@redhat.com> 3.5.5.20-1
 - Prepending v to registry-console version (ewolinet@redhat.com)
 - Revert "Add /etc/sysconfig/etcd to etcd_container" (abutcher@redhat.com)
